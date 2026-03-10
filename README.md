@@ -2,6 +2,8 @@
 
 SVG Studio is a powerful, visual SVG editor built with Next.js and Material UI. It combines the ease of a canvas-based design tool with the precision of a real-time code editor and the intelligence of Gemini AI.
 
+**[Try the Live Demo](https://surquest.github.io/svg-editor-react)**
+
 ![SVG Studio Interface](https://via.placeholder.com/800x450?text=SVG+Studio+Interface)
 
 ## 🚀 Features
