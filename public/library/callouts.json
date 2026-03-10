@@ -1,0 +1,25 @@
+{
+  "name": "Callouts & Badges",
+  "shapes": [
+    {
+      "name": "Info Badge",
+      "svg": "<g><circle cx=\"20\" cy=\"20\" r=\"20\" fill=\"#3b82f6\" /><text x=\"20\" y=\"27\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"24\" font-weight=\"bold\" fill=\"white\">i</text></g>"
+    },
+    {
+      "name": "Warning Badge",
+      "svg": "<g><polygon points=\"25,2 48,45 2,45\" fill=\"#f59e0b\" /><text x=\"25\" y=\"40\" text-anchor=\"middle\" font-family=\"sans-serif\" font-size=\"26\" font-weight=\"bold\" fill=\"white\">!</text></g>"
+    },
+    {
+      "name": "Ribbon Banner",
+      "svg": "<g><rect x=\"10\" y=\"5\" width=\"60\" height=\"30\" rx=\"4\" fill=\"#6366f1\" /><polygon points=\"0,5 10,5 10,35 0,25\" fill=\"#4f46e5\" /><polygon points=\"80,5 70,5 70,35 80,25\" fill=\"#4f46e5\" /></g>"
+    },
+    {
+      "name": "Tag",
+      "svg": "<g><path d=\"M5,5 H55 L70,22.5 L55,40 H5 V5Z\" fill=\"#10b981\" /><circle cx=\"10\" cy=\"22.5\" r=\"4\" fill=\"white\" /></g>"
+    },
+    {
+      "name": "Starburst",
+      "svg": "<polygon points=\"25,0 29,10 40,5 33,15 45,17 34,22 42,32 31,27 28,40 24,28 14,35 18,24 5,22 16,17 8,8 20,12\" fill=\"#ef4444\" />"
+    }
+  ]
+}

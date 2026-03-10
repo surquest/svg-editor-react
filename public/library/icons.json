@@ -1,0 +1,29 @@
+{
+  "name": "Icons",
+  "shapes": [
+    {
+      "name": "Heart",
+      "svg": "<path d=\"M25,45 L5,25 A10,10 0,0,1 25,10 A10,10 0,0,1 45,25 Z\" fill=\"#ef4444\" />"
+    },
+    {
+      "name": "Checkmark",
+      "svg": "<polyline points=\"5,25 18,40 45,10\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />"
+    },
+    {
+      "name": "Lightning Bolt",
+      "svg": "<polygon points=\"25,0 10,22 20,22 15,50 35,20 25,20\" fill=\"#f59e0b\" />"
+    },
+    {
+      "name": "Gear",
+      "svg": "<path d=\"M22,0 L28,0 L30,6 L35,8 L40,4 L44,8 L40,13 L42,18 L48,20 L48,26 L42,28 L40,33 L44,38 L40,42 L35,38 L30,40 L28,46 L22,46 L20,40 L15,38 L10,42 L6,38 L10,33 L8,28 L2,26 L2,20 L8,18 L10,13 L6,8 L10,4 L15,8 L20,6 Z\" fill=\"#64748b\" />"
+    },
+    {
+      "name": "Cloud",
+      "svg": "<path d=\"M15,35 A10,10 0 0,1 10,15 A12,12 0 0,1 30,8 A10,10 0 0,1 48,15 A8,8 0 0,1 45,35 Z\" fill=\"#93c5fd\" />"
+    },
+    {
+      "name": "Speech Bubble",
+      "svg": "<g><rect x=\"0\" y=\"0\" width=\"60\" height=\"35\" rx=\"8\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" stroke-width=\"2\" /><polygon points=\"12,35 20,45 24,35\" fill=\"#e2e8f0\" stroke=\"#94a3b8\" stroke-width=\"2\" /><line x1=\"12\" y1=\"35\" x2=\"24\" y2=\"35\" stroke=\"#e2e8f0\" stroke-width=\"3\" /></g>"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Basic Shapes",
+  "shapes": [
+    {
+      "name": "Rounded Rectangle",
+      "svg": "<rect x=\"0\" y=\"0\" width=\"80\" height=\"50\" rx=\"12\" ry=\"12\" fill=\"#6366f1\" />"
+    },
+    {
+      "name": "Diamond",
+      "svg": "<polygon points=\"25,0 50,25 25,50 0,25\" fill=\"#f59e0b\" />"
+    },
+    {
+      "name": "Triangle",
+      "svg": "<polygon points=\"25,0 50,50 0,50\" fill=\"#10b981\" />"
+    },
+    {
+      "name": "Pentagon",
+      "svg": "<polygon points=\"25,0 50,18 40,50 10,50 0,18\" fill=\"#8b5cf6\" />"
+    },
+    {
+      "name": "Hexagon",
+      "svg": "<polygon points=\"13,0 38,0 50,25 38,50 13,50 0,25\" fill=\"#ec4899\" />"
+    },
+    {
+      "name": "Star",
+      "svg": "<polygon points=\"25,0 31,18 50,18 35,30 40,50 25,38 10,50 15,30 0,18 19,18\" fill=\"#f59e0b\" />"
+    },
+    {
+      "name": "Cross",
+      "svg": "<polygon points=\"15,0 35,0 35,15 50,15 50,35 35,35 35,50 15,50 15,35 0,35 0,15 15,15\" fill=\"#ef4444\" />"
+    },
+    {
+      "name": "Parallelogram",
+      "svg": "<polygon points=\"15,0 65,0 50,40 0,40\" fill=\"#0ea5e9\" />"
+    }
+  ]
+}
