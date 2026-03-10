@@ -60,6 +60,46 @@ function DebouncedColorInput({ attr, value, onUpdateAttribute }: DebouncedColorI
   );
 }
 
+interface DebouncedTextInputProps {
+  attr: string;
+  value: string;
+  onUpdateAttribute: (attr: string, value: string) => void;
+  placeholder?: string;
+}
+
+function DebouncedTextInput({ attr, value, onUpdateAttribute, placeholder }: DebouncedTextInputProps) {
+  const [localVal, setLocalVal] = useState(value);
+  const timeoutRef = useRef<NodeJS.Timeout>(undefined);
+
+  useEffect(() => {
+    setLocalVal(value);
+  }, [value]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newVal = e.target.value;
+    setLocalVal(newVal);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      onUpdateAttribute(attr, newVal);
+    }, 50);
+  };
+
+  return (
+    <TextField
+      size="small"
+      fullWidth
+      variant="outlined"
+      value={localVal}
+      placeholder={placeholder}
+      onChange={handleChange}
+      sx={{
+        '& .MuiInputBase-input': { fontFamily: 'monospace', fontSize: '0.75rem' },
+        mt: attr === 'text-content' ? 0.5 : 0,
+      }}
+    />
+  );
+}
+
 interface PropertiesPanelProps {
   open: boolean;
   selectedElements: SVGElement[];
@@ -171,13 +211,10 @@ export default React.memo(function PropertiesPanel({
               <Typography variant="caption" color="text.secondary" fontWeight="bold" sx={{ textTransform: 'uppercase', letterSpacing: 1 }}>
                 Content
               </Typography>
-              <TextField
-                size="small"
-                fullWidth
-                variant="outlined"
+              <DebouncedTextInput
+                attr="text-content"
                 value={firstEl.textContent || ''}
-                onChange={(e) => onUpdateAttribute('text-content', e.target.value)}
-                sx={{ mt: 0.5 }}
+                onUpdateAttribute={onUpdateAttribute}
               />
             </Box>
           )}
@@ -205,16 +242,11 @@ export default React.memo(function PropertiesPanel({
                       onUpdateAttribute={onUpdateAttribute}
                     />
                   )}
-                  <TextField
-                    size="small"
-                    fullWidth
-                    variant="outlined"
+                  <DebouncedTextInput
+                    attr={attr}
                     value={val}
                     placeholder={isColor ? 'none' : undefined}
-                    onChange={(e) => onUpdateAttribute(attr, e.target.value)}
-                    sx={{
-                      '& .MuiInputBase-input': { fontFamily: 'monospace', fontSize: '0.75rem' },
-                    }}
+                    onUpdateAttribute={onUpdateAttribute}
                   />
                 </Stack>
               </Box>
